@@ -1143,8 +1143,8 @@ window.ccchart =
       var yScaleRotate =
         this.op.config.yScaleRotate || this.gcf.yScaleRotate || 0;
 
-      xOffset = (this._addsFlg === 2)?(this.chartRight+10):xOffset;
-      yScaleAlign = (this._addsFlg === 2)?'left':yScaleAlign;
+      xOffset = (this._addsFlg === 1)?(this.chartRight+10):xOffset;
+      yScaleAlign = (this._addsFlg === 1)?'left':yScaleAlign;
 
       //Y軸反転 DESCはデフォルト降順
       var expression = top <= this.chartTop;
@@ -1285,7 +1285,7 @@ window.ccchart =
       if(this._addsFlg > 0){
 
         if(align === "left"){
-          xOffset = xOffset + 42;//本当は下記のように目盛りの文字サイズを計って修正する
+          xOffset = xOffset + 52;//本当は下記のように目盛りの文字サイズを計って修正する
         } else {
            xOffset = xOffset;//本当はcenterも同様に下記のように目盛りの文字サイズを計って修正する
         }
@@ -1404,8 +1404,8 @@ window.ccchart =
       var align =
         this.op.config.unitAlign || this.gcf.unitAlign || "right";
 
-      left = (this._addsFlg === 2)?(this.chartRight+10):left;
-      align = (this._addsFlg === 2)?'left':align;
+      left = (this._addsFlg === 1)?(this.chartRight+10):left;
+      align = (this._addsFlg === 1)?'left':align;
 
       if(typeof unit==='string'){
         this.unit = this.unit;
